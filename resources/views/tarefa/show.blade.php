@@ -15,7 +15,8 @@
                         <div class="mb-3">
                         </div>
                     </fieldset>
-                    <a href='{{ url()->previous() }}'class="btn btn-primary">Voltar</a>
+                    {{-- <a href='{{ url()->previous() }}'class="btn btn-primary">Voltar</a> --}}
+                    <a href='{{ route('tarefa.index') }}'class="btn btn-primary">Voltar</a>
                 </div>
             </div>
         </div>
