@@ -44,6 +44,10 @@
                         @auth
                             <a class="nav-link" href="{{ route('tarefa.index') }}">{{ __('Tarefas') }}</a>
                             <a class="nav-link" href="{{ route('tarefa.create') }}">{{ __('Novo') }}</a>
+                            <a class="nav-link" href="{{ route('tarefa.export', ['extension' => 'xlsx'] ) }}">{{ __('XLSX') }}</a>
+                            <a class="nav-link" href="{{ route('tarefa.export', ['extension' => 'csv'] ) }}">{{ __('CSV') }}</a>
+                            {{-- <a class="nav-link" href="{{ route('tarefa.export', ['extension' => 'pdf'] ) }}">{{ __('PDF') }}</a> --}}
+                            <a class="nav-link" href="{{ route('tarefa.exportPDF') }}" target="_blank">{{ __('PDF') }}</a>
                         @endauth 
                 
                     </ul>
