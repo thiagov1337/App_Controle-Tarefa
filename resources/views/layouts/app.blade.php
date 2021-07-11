@@ -36,10 +36,15 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
 
-                        @if (auth()->check()) 
+                        {{-- @if (auth()->check()) 
                             <a class="nav-link" href="{{ route('tarefa.index') }}">{{ __('Tarefas') }}</a>
-                            <a class="nav-link" href="{{ route('tarefa.create') }}">{{ __('Criação') }}</a>
-                        @endif
+                            <a class="nav-link" href="{{ route('tarefa.create') }}">{{ __('Novo') }}</a>
+                        @endif --}}
+
+                        @auth
+                            <a class="nav-link" href="{{ route('tarefa.index') }}">{{ __('Tarefas') }}</a>
+                            <a class="nav-link" href="{{ route('tarefa.create') }}">{{ __('Novo') }}</a>
+                        @endauth 
                 
                     </ul>
 
